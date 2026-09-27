@@ -1,0 +1,15 @@
+{
+  "name": "secure-signup-login-demo",
+  "version": "1.0.0",
+  "description": "Simple Express signup/login app with JSON storage and sessions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}
