@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuthFlow | Signup & Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="brand">
+      <div class="logo">A</div>
+      <h1>AuthFlow</h1>
+      <p>A simple, secure signup and login demo built with Node.js + Express.</p>
+      <div class="features">
+        <span>🔐 Hashed passwords</span>
+        <span>🍪 Session authentication</span>
+        <span>🗄️ JSON database</span>
+      </div>
+    </section>
 
+    <section class="card">
+      <div class="tabs">
+        <button class="tab active" data-view="login">Login</button>
+        <button class="tab" data-view="signup">Create account</button>
+      </div>
+
+      <div id="message" class="message hidden"></div>
+
+      <form id="loginForm" class="form">
+        <label>Email
+          <input type="email" id="loginEmail" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input type="password" id="loginPassword" placeholder="••••••••" required>
+        </label>
+        <button class="primary" type="submit">Log in</button>
+      </form>
+
+      <form id="signupForm" class="form hidden">
+        <label>Full name
+          <input type="text" id="signupName" placeholder="Dhanush" required>
+        </label>
+        <label>Email
+          <input type="email" id="signupEmail" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input type="password" id="signupPassword" placeholder="Minimum 6 characters" minlength="6" required>
+        </label>
+        <button class="primary" type="submit">Create account</button>
+      </form>
+
+      <div id="dashboard" class="dashboard hidden">
+        <div class="avatar" id="avatar">A</div>
+        <h2 id="welcome">Welcome!</h2>
+        <p id="accountEmail"></p>
+        <div class="protected-box">
+          <strong>Protected area</strong>
+          <span id="protectedText">Checking session...</span>
+        </div>
+        <button id="logoutBtn" class="secondary">Log out</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
